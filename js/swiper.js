@@ -58,7 +58,7 @@
   }
   if (".slider-provide".length > 0) {
     var swiper = new Swiper(".slider-provide", {
-      slidesPerView: 3,
+      slidesPerView: 2,
       loop: true,
       spaceBetween: 30,
       navigation: {
@@ -76,6 +76,29 @@
       },
       pagination: {
         el: ".swiper-pagination.pagination-slider-provide",
+        clickable: true,
+      },
+    });
+  }
+  if (".slider-our-value".length > 0) {
+    var swiper = new Swiper(".slider-our-value", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".btn-slider-our-value.style-2.btn-next",
+        prevEl: ".btn-slider-our-value.style-2.btn-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        700: {
+          slidesPerView: 2,
+        },
+        991: { slidesPerView: 3 },
+      },
+      pagination: {
+        el: ".swiper-pagination.pagination-slider-our-value",
         clickable: true,
       },
     });
@@ -243,6 +266,10 @@
           slidesPerView: 2.5,
         },
         1200: { slidesPerView: 3 },
+      },
+       pagination: {
+        el: ".swiper-pagination.pagination-slider-blog-post",
+        clickable: true,
       },
     });
   }
